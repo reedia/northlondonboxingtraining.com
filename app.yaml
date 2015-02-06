@@ -1,0 +1,61 @@
+application: northlondonboxingtraining-site
+version: 1
+api_version: 1
+runtime: python27
+threadsafe: true
+
+default_expiration: "1d"
+
+handlers:
+
+# Config files        
+- url: /(robots\.txt|humans\.txt|crossdomain\.xml|sitemap\.xml)
+  static_files: \1
+  upload: (robots\.txt|humans\.txt|crossdomain\.xml|sitemap\.xml)    
+
+# CSS files    
+- url: /stylesheets(.*\.(css))
+  mime_type: text/css
+  static_files: stylesheets\1
+  upload: stylesheets(.*\.(css))
+
+# JS files
+- url: /javascripts(.*\.(js))
+  mime_type: text/javascript
+  static_files: javascripts\1
+  upload: javascripts(.*\.(js))
+
+# image files
+- url: /images(.*\.(gif|png|jpg|ico|js|css|xml|svg))
+  static_files: images\1
+  upload: images(.*\.(gif|png|jpg|ico|js|css|xml|svg))
+
+# video files  
+- url: /videos(.*\.mp4)
+  mime_type: video/mp4
+  static_files: videos\1
+  upload: videos(.*\.(mp4))
+
+- url: /videos(.*\.ogv)
+  mime_type: video/ogg
+  static_files: videos\1
+  upload: videos(.*\.(ogv))
+
+- url: /videos(.*\.webm)
+  mime_type: video/webm
+  static_files: videos\1
+  upload: videos(.*\.(webm))
+
+- url: /(google1a782dc66bbc2f73\.html)
+  mime_type: text/html
+  static_files: \1
+  upload: /(google1a782dc66bbc2f73\.html)
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
