@@ -530,10 +530,6 @@ a,a:visited {
 	color: #E92127;
 	text-decoration: none;
 	outline: 0;
-	-webkit-transition: color .3s ease-out 0;
-	-moz-transition: color .3s ease-out 0;
-	-o-transition: color .3s ease-out 0;
-	transition: color .3s ease-out 0
 }
 
 a:hover,a:focus {
@@ -670,7 +666,7 @@ label {
 .clearfix {
 	*zoom: 1
 }
-.footer,.footer a,a:visited{color: #fff;}
+.footer,.footer a,footer a:visited{color: #fff;}
 
 nav {
 	height: auto;
@@ -694,6 +690,7 @@ nav li {
 }
 
 nav a {
+	font-size: 1.125em;
 	display: inline-block;
 	width: auto;
 	text-align: left;
@@ -709,7 +706,6 @@ nav li a {
 	margin: 0;
 	border-top: 0;
 	border-bottom: 0;
-	font-size: 1.125em;
 }
 
 nav li:last-child a {
