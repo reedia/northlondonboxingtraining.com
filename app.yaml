@@ -12,44 +12,60 @@ handlers:
 - url: /(robots\.txt|humans\.txt|crossdomain\.xml|sitemap\.xml)
   static_files: \1
   upload: (robots\.txt|humans\.txt|crossdomain\.xml|sitemap\.xml)    
+  expiration: "7d"
+  http_headers:
+    Vary: Accept-Encoding
 
 # CSS files    
 - url: /stylesheets(.*\.(css))
   mime_type: text/css
   static_files: stylesheets\1
   upload: stylesheets(.*\.(css))
+  expiration: "7d"
+  http_headers:
+    Vary: Accept-Encoding
 
 # JS files
 - url: /javascripts(.*\.(js))
   mime_type: text/javascript
   static_files: javascripts\1
   upload: javascripts(.*\.(js))
+  expiration: "7d"
+  http_headers:
+    Vary: Accept-Encoding
 
 # image files
 - url: /images(.*\.(gif|png|jpg|ico|js|css|xml|svg))
   static_files: images\1
   upload: images(.*\.(gif|png|jpg|ico|js|css|xml|svg))
+  expiration: "7d"
+  http_headers:
+    Vary: Accept-Encoding
 
 # video files  
 - url: /videos(.*\.mp4)
   mime_type: video/mp4
   static_files: videos\1
   upload: videos(.*\.(mp4))
+  expiration: "7d"
+  http_headers:
+    Vary: Accept-Encoding
 
 - url: /videos(.*\.ogv)
   mime_type: video/ogg
   static_files: videos\1
   upload: videos(.*\.(ogv))
+  expiration: "7d"
+  http_headers:
+    Vary: Accept-Encoding
 
 - url: /videos(.*\.webm)
   mime_type: video/webm
   static_files: videos\1
   upload: videos(.*\.(webm))
-
-- url: /(google1a782dc66bbc2f73\.html)
-  mime_type: text/html
-  static_files: \1
-  upload: /(google1a782dc66bbc2f73\.html)
+  expiration: "7d"
+  http_headers:
+    Vary: Accept-Encoding
 
 - url: .*
   script: main.app
