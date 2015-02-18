@@ -11,7 +11,7 @@ class MainHandler(webapp2.RequestHandler):
         subtitle = "Boxing and Fitness training"
         description = "From cardio training to advance fitness courses, Jake Foley offers expert boxing training that has the power to transform his clients."
         keywords = "north london boxing training,strength training sessions,personal trainer,cardio training, advance fitness courses, jake foley,expert boxing training"
-        banner="<div id=\"video\"><video autoplay loop poster=\"/images/other/jake.png\"><source src=\"/videos/jake.ogv\" type=\"video/ogg\"><source src=\"/videos/jake.webm\" type=\"video/webm\"><source src=\"/videos/jake.mp4\" type=\"video/mp4\"></video></div>"
+        banner="<div id=\"video\"><video autoplay=\"autoplay\" poster=\"/images/other/jake.png\" loop><source src=\"/videos/jake.ogv\" type=\"video/ogg\"><source src=\"/videos/jake.webm\" type=\"video/webm\"><source src=\"/videos/jake.mp4\" type=\"video/mp4\"></video></div>"
         template_vars = {"title":title,"subtitle":subtitle,"description":description,"keywords": keywords,"banner": banner}
         template = JINJA_ENVIRONMENT.get_template("index.html")
         self.response.write(template.render(template_vars))
@@ -49,9 +49,33 @@ class GetInTouchHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template("get-in-touch.html")
         self.response.write(template.render(template_vars))
 
+class BlogHandler(webapp2.RequestHandler):
+    def get(self):
+        title = "Basics"
+        subtitle = "Boxing Basics"
+        description = "Boxing is a sport that requires intense workout without having to tear your muscles and joints."
+        keywords = "jake foley,boxing,sport,workout,muscles,joints"
+        template_vars = {"title":title,"subtitle":subtitle,"description":description,"keywords": keywords}
+        template = JINJA_ENVIRONMENT.get_template("blog.html")
+        self.response.write(template.render(template_vars))
+
+class ArticlesHandler(webapp2.RequestHandler):
+    def get(self):
+        title = "Boxing Tips For Beginners"
+        subtitle = "It all starts in the mirror"
+        description = "The best beginner boxing tip one can give is to first improve their whole body strenghts"
+        keywords = "boxing tip,beginner boxing,heavy bag,boxing training,jab,muscles,workouts"
+        path = self.request.path
+        template_vars = {"title":title,"subtitle":subtitle,"description":description,"keywords": keywords,"path":path}
+        template = JINJA_ENVIRONMENT.get_template("articles.html")
+        self.response.write(template.render(template_vars))
+
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/about.html', StoryHandler),
     ('/whats-involved.html', WhatsInvolvedHandler),
     ('/get-in-touch.html', GetInTouchHandler),
+    ('/blog.html', BlogHandler),
+    ('/.*', ArticlesHandler),
 ], debug=True)
