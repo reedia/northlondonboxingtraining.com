@@ -11,7 +11,8 @@ class MainHandler(webapp2.RequestHandler):
         subtitle = "Boxing and Fitness training"
         description = "From cardio training to advance fitness courses, Jake Foley offers expert boxing training that has the power to transform his clients."
         keywords = "north london boxing training,strength training sessions,personal trainer,cardio training, advance fitness courses, jake foley,expert boxing training"
-        banner="<div id=\"video\"><video autoplay=\"autoplay\" poster=\"/images/other/jake.png\" loop><source src=\"/videos/jake.ogv\" type=\"video/ogg\"><source src=\"/videos/jake.webm\" type=\"video/webm\"><source src=\"/videos/jake.mp4\" type=\"video/mp4\"></video></div>"
+        banner = "<picture><img src=\"/images/other/jake.png\" width=\"960\" height=\"378\" alt=\"North London Boxing Training\" /></picture>"
+        # banner="<div id=\"video\"><video autoplay=\"autoplay\" poster=\"/images/other/jake.png\" loop><source src=\"/videos/jake.ogv\" type=\"video/ogg\"><source src=\"/videos/jake.webm\" type=\"video/webm\"><source src=\"/videos/jake.mp4\" type=\"video/mp4\"></video></div>"
         template_vars = {"title":title,"subtitle":subtitle,"description":description,"keywords": keywords,"banner": banner}
         template = JINJA_ENVIRONMENT.get_template("index.html")
         self.response.write(template.render(template_vars))

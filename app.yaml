@@ -8,15 +8,15 @@ default_expiration: "1d"
 
 handlers:
 
-# Config files        
+# Config files
 - url: /(robots\.txt|humans\.txt|crossdomain\.xml|sitemap\.xml)
   static_files: \1
-  upload: (robots\.txt|humans\.txt|crossdomain\.xml|sitemap\.xml)    
+  upload: (robots\.txt|humans\.txt|crossdomain\.xml|sitemap\.xml)
   expiration: "7d"
   http_headers:
     Vary: Accept-Encoding
 
-# CSS files    
+# CSS files
 - url: /stylesheets(.*\.(css))
   mime_type: text/css
   static_files: stylesheets\1
@@ -42,7 +42,16 @@ handlers:
   http_headers:
     Vary: Accept-Encoding
 
-# video files  
+# RSS files
+- url: (.*\.xml)
+  mime_type: application/rss+xml
+  static_files: rss\1
+  upload: rss(.*\.xml)
+  expiration: "1h"
+  http_headers:
+    Vary: Accept-Encoding
+
+# video files
 - url: /videos(.*\.mp4)
   mime_type: video/mp4
   static_files: videos\1

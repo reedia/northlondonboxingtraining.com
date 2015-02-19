@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/shared/bsp/xsl/rss/nolsol.xsl"?>
+
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>North London Boxing Training</title>
+    <link>http://northlondonboxingtraining.co.uk/</link>
+    <description>From cardio training to advance fitness courses, Jake Foley offers expert boxing training that has the power to transform his clients.</description>
+    <language>en-gb</language>
+    <copyright>Copyright: (C) Reedia Limited2015. All rights reserved.</copyright>
+    <image>
+      <url>http://northlondonboxingtraining.co.uk/images/icon/apple-touch-icon-120x120.png</url>
+      <title>North London Boxing Training</title>
+      <link>http://northlondonboxingtraining.co.uk/</link>
+      <width>120</width>
+      <height>120</height>
+    </image>
+    <ttl>2</ttl>
+    <atom:link href="http://northlondonboxingtraining.co.uk/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Wrap Your Hands For Beginners</title>
+      <description>In boxing your hands are your attacking weapons and defensive tools, they receive a good deal of impact both during training sessions and in a fight, so more effort should be put into keeping them well protected from harm.</description>
+      <link>http://northlondonboxingtraining.co.uk/wrap-hands-for-beginners-19022015.html</link>
+      <guid isPermaLink="false">http://reed.io/1FvgDdg</guid>
+      <pubDate>Thu, 19 Feb 2015 00:00:00 GMT</pubDate>
+      <media:thumbnail width="66" height="66" url="http://northlondonboxingtraining.co.uk/images/other/article_2.jpg"/>
+      <media:thumbnail width="144" height="144" url="http://northlondonboxingtraining.co.uk/images/other/article_2.jpg"/>
+    </item>
+    <item>
+      <title>Boxing Tips For Beginners</title>
+      <description>Boxing is a sport that requires intense workout without having to tear your muscles and joints.</description>
+      <link>http://northlondonboxingtraining.co.uk/boxing-tips-for-beginners-18022015.html</link>
+      <guid isPermaLink="false">http://reed.io/1AHxoAO</guid>
+      <pubDate>Wed, 18 Feb 2015 00:00:00 GMT</pubDate>
+      <media:thumbnail width="66" height="66" url="http://northlondonboxingtraining.co.uk/images/other/article_1.jpg"/>
+      <media:thumbnail width="144" height="144" url="http://northlondonboxingtraining.co.uk/images/other/article_1.jpg"/>
+    </item>
+  </channel>
+</rss>
