@@ -1321,6 +1321,7 @@ section
 .left
 {
     text-align: left;
+    clear:left;
 }
 .right
 {
@@ -1329,6 +1330,5 @@ section
 .wrap
 {
     float: left;
-    clear: left;
     margin: 10px 10px 10px 0;
 }
