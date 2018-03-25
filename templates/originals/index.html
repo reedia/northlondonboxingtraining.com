@@ -19,14 +19,14 @@
     <meta property="og:site_name" content="North London Boxing Training">
     <meta property="fb:app_id" content="405125519646625" />
 
-    <meta name="dcterms.rightsHolder" content="Copyright © 2015 Reedia Limited. All rights reserved.">
+    <meta name="dcterms.rightsHolder" content="Copyright © 2018 Reedia Limited. All rights reserved.">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui">
 
     <link type="text/plain" rel="author" href="/humans.txt" />
     <link href="/rss.xml" rel="alternate" type="application/rss+xml" />
 
-    <link href="/stylesheets/print.min.css" type="text/css" rel="stylesheet" media="print">
-
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/skeletonic@1.0.95/dist/skeletonic.min.css" />
+    
     <link rel="publisher" href="https://google.com/+Northlondonboxingtraining">
     <link rel="apple-touch-icon" href="/images/icon/apple-touch-icon-180x180.png" />
     <link rel="apple-touch-icon" href="/images/icon/apple-touch-icon-152x152.png" />
@@ -45,111 +45,93 @@
 
     <link rel="icon" href="/images/favicon/favicon-192x192.png" />
     <link rel="dns-prefetch" href="//www.google-analytics.com">
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="sixteen columns">
+    <main class="container center text-center">
+        <section class="grid-flex">
+            <row class="flex-10">
                 <header role="banner">
-                    <a href="/" title="North London Boxing Training">
-                        <picture>
-                            <source srcset="/images/logo/northlondonboxingtraining.svg" type="image/svg+xml">
-                                <img src="/images/logo/northlondonboxingtraining.png" width="250" height="250" alt="North London Boxing Training" />
-                        </picture>
-                    </a>
-                    <h1 class="logo">{{ title }}</h1>
-                    <nav class="clearfix">
-                        <div class="section">
-                            <div id="main-menu">
-                                <ul class="clearfix">
-                                    <li>
-                                        <a href="/" title="Welcome" class="uppercase">
-                                                Welcome
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a href="/about.html" title="About Us" class="uppercase">
-                                                About Us
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a href="/whats-involved.html" title="What's involved" class="uppercase">
-                                                What's involved
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a href="/blog.html" title="Blog" class="uppercase">
-                                                Boxing Basics
-                                            </a>
-                                    </li>
-                                    <li>
-                                        <a href="/get-in-touch.html" title="Get in touch" class="uppercase">
-                                                Get in touch
-                                            </a>
-                                    </li>
-                                </ul>
-                                <a href="" id="pull">
-                                        Menu
-                                    </a>
-                            </div>
-                        </div>
-                    </nav>
+                    <picture>
+                        <source srcset="/images/logo/northlondonboxingtraining.svg" type="image/svg+xml">
+                        <img src="/images/logo/northlondonboxingtraining.png" style="width:50hw;height:35vw;" alt="{{ title }} | {{ subtitle }}" title="{{ title }} | {{ subtitle }}" />
+                    </picture>
+                    <h1 class="logo">Call Now 07788 272424</h1>                                        
                 </header>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="sixteen columns">
-                <main role="main">
-                    <div>
-                        <section>
-                            <h2>{{ subtitle }}</h2>
-                            <a href="tel:+447788272424" class="callbutton"><span><strong>Call Now<br />07788 272424</strong></span></a> {{ banner }} {% block content %}
-                            <p>Unleash the boxer within by hiring Jake Foley to be your personal trainer. Located in North London, Jake has been training with and coaching amateur and professional boxers for over 10 years and continues to build on his strength training sessions and lessons. From cardio training to advance fitness courses, Jake offers expert boxing training that has the power to transform his clients. Discover the boxer within, and get in touch with Jake today!</p>
-                            {% endblock %}
-                        </section>
-                    </div>
-                </main>
-            </div>
-        </div>
-        <div class="row">
-            <div class="sixteen columns">
-
+            </row>
+        </section>
+        <section class="grid-flex">
+            <row class="flex-10 text-left">    
+                <nav class="navbar">
+                    <ul class="nav">
+                        <li>
+                            <a href="/" title="Welcome" class="nav-item effect-1">Welcome</a>
+                        </li>
+                        <li>
+                            <a href="/about.html" title="About Us" class="nav-item effect-1">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/whats-involved.html" title="What's involved" class="nav-item effect-1">What's involved</a>
+                        </li>
+                        <li>
+                            <a href="/blog.html" title="Blog" class="nav-item effect-1">Boxing Basics</a>
+                        </li>
+                        <li>
+                            <a href="/get-in-touch.html" title="Get in touch" class="nav-item effect-1">Get in touch</a>
+                        </li>
+                    </ul>
+                </nav>
+            </row>
+        </section>
+        <section class="grid-flex">
+            <row class="flex-10 text-left">
+                <h2>{{ subtitle }}</h2>
+                {{ banner }} {% block content %}
+                <p>Unleash the boxer within by hiring Jake Foley to be your personal trainer. Located in North London, Jake
+                    has been training with and coaching amateur and professional boxers for over 10 years and continues to
+                    build on his strength training sessions and lessons. From cardio training to advance fitness courses,
+                    Jake offers expert boxing training that has the power to transform his clients. Discover the boxer within,
+                    and get in touch with Jake today!</p>
+                {% endblock %}
+            </row>
+        </section>
+        <section class="grid-flex">
+            <row class="flex-10">
                 <footer role="contentinfo">
                     <hr />
                     <div class="addthis_responsive_sharing"></div>
                     <div class="section">
                         <p>
-                            Copyright &#169; <a href="http://www.reedia.com/" class="footer">Reedia Limited</a> 2015. All rights reserved.
+                            Copyright &#169;
+                            <a href="http://www.reedia.com/" class="footer">Reedia Limited</a> 2018. All rights reserved.
                         </p>
                         <p>
-                          <a href="https://www.facebook.com/pages/North-London-Boxing-Training/405125519646625" rel="publisher" title="Visit North London Boxing Training Facebook Page">Facebook</a> |
-                          <a href="https://google.com/+Northlondonboxingtraining" rel="publisher" title="Visit North London Boxing Training Google+ Page">Google+</a>
+                            <a href="https://www.facebook.com/pages/North-London-Boxing-Training/405125519646625" rel="publisher" title="Visit North London Boxing Training Facebook Page">Facebook</a> |
+                            <a href="https://google.com/+Northlondonboxingtraining" rel="publisher" title="Visit North London Boxing Training Google+ Page">Google+</a>
                         </p>
                     </div>
                 </footer>
-            </div>
-        </div>
-    </div>
+            </row>
+        </section>
+    </main>
     <script>document.write('<link href="/stylesheets/nlbt.min.css" rel="stylesheet" type="text/css" />');</script>
     <script src="/javascripts/nlbt.min.js"></script>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54ce532e70dd0683" async="async"></script>
     <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-59702602-1', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-59702602-1', 'auto');
+        ga('send', 'pageview');
     </script>
 </body>
 

@@ -1,0 +1,23 @@
+{
+    "version": "0.1.0",
+    "command": "python",
+    
+    // The command is a shell script
+    "isShellCommand": true,
+    
+    // Show the output window only if unrecognized errors occur.
+    "showOutput": "always",
+
+    // The file name for reported problems is relative to the current working directory.
+    "fileLocation": ["relative", "${cwd}"],
+        
+    "args": [
+        "${env:HOME}/google-cloud-sdk/platform/google_appengine/dev_appserver.py",
+        "--python_startup_script=${workspaceRoot}/pydev_startup.py",
+        "--automatic_restart=no",
+        "--max_module_instances=default:1",
+        "--datastore_path=${workspaceRoot}/tmp/datastore.db",
+        "--storage_path=${workspaceRoot}/tmp/",        
+        "${workspaceRoot}/app.yaml"
+    ]
+}

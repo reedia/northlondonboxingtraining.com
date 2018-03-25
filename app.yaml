@@ -82,42 +82,41 @@ handlers:
 inbound_services:
   - warmup
 
-pagespeed:
+# pagespeed:
+#   disabled_rewriters:
+#   - add_instrumentation
+#   - CombineJs
+#   - ConvertMetaTags
+#   - FallbackRewriteCssUrls
+#   - FlattenCssImports
+#   - FlushSubresources
+#   - ImageConvertGifToPng
+#   - ImageConvertToJpeg
+#   - ImageConvertToWebpLossless
+#   - ImageResize
+#   - InlineImages
+#   - InlineImportToLink
+#   - InlinePreviewImages
+#   - InsertDnsPrefetch
+#   - JsOptimize
+#   - LazyloadImages
+#   - MinifyCss
+#   - MoveCssToHead
+#   - ProxyCss
+#   - ProxyImages
+#   - ProxyJs
 
-  disabled_rewriters:
-  - add_instrumentation
-  - CombineJs
-  - ConvertMetaTags
-  - FallbackRewriteCssUrls
-  - FlattenCssImports
-  - FlushSubresources
-  - ImageConvertGifToPng
-  - ImageConvertToJpeg
-  - ImageConvertToWebpLossless
-  - ImageResize
-  - InlineImages
-  - InlineImportToLink
-  - InlinePreviewImages
-  - InsertDnsPrefetch
-  - JsOptimize
-  - LazyloadImages
-  - MinifyCss
-  - MoveCssToHead
-  - ProxyCss
-  - ProxyImages
-  - ProxyJs
-
-  enabled_rewriters:
-  - CombineCss
-  - InlineCss
-  - WebpOptimization
-  - PrioritizeCriticalCss
-  - ImageJpegSubsampling
-  - ImageProgressiveJpeg
-  - ImageRecompressJpeg
-  - ImageRecompressPng
-  - ImageStripColorProfile
-  - ImageStripMetadata
+#   enabled_rewriters:
+#   - CombineCss
+#   - InlineCss
+#   - WebpOptimization
+#   - PrioritizeCriticalCss
+#   - ImageJpegSubsampling
+#   - ImageProgressiveJpeg
+#   - ImageRecompressJpeg
+#   - ImageRecompressPng
+#   - ImageStripColorProfile
+#   - ImageStripMetadata
 
 libraries:
 - name: webapp2
